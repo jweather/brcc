@@ -5,6 +5,11 @@ import socket
 import time
 import hashlib
 
+if len(sys.argv) < 4:
+    print 'Usage: pjlink.py <ip> <password> <command>'
+    print "Example: pjlink.py 10.10.10.10 panasonic '%1POWR ?'"
+    sys.exit()
+
 ip = sys.argv[1]
 pwd = sys.argv[2]
 cmd = sys.argv[3]
